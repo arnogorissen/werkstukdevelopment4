@@ -1,25 +1,30 @@
-# Development 4: Opdracht Werkstuk
+# Development 4: Opdracht Werkstuk Arno Gorissen
 
-## Short
-Podiumaanhuis.be is a new website that offers full video's of theater pieces. It's created very quickly using Webflow, a  very simple website creating platform. Now the organisation wants to recreate the app from scratch, using HTML, CSS and Javascript.
+De belangrijkste functies die de webpagina moet hebben zijn
+1) het inladen van de content
+2) de zoekfunctie
+3) het filteren van de content op genre en doelgroep
 
-One feature is the option to filter the video entries based on genres and audience. Using the JSON fetch the entries, show them on the page, and recreate the filter like it is presented on podiumaanhuis.be.
 
-## Requirements
-- Write out your approach in the readme.md file. Do a functional analysis of the existing app. Plan your data, functions and the flow of your app.
-- It must work. This is the most important requirement. Don't worry too much about clean code or functional programming in the beginning. Create the app, and iterate.
-- Push your iterations to github.
-- Try to make your code as functional & pure as possible.
-- Try to avoid side effects as much as possible.
-- Write tests for at least 2 functions
-- Show the result on the webpage
-- COMMENTS COMMENTS COMMENTS
+1)
+voor het inladen van de content heb ik de json file gebruikt. Ik append elke element aan een div die ik in mijn html heb gezet.
+vanaf dat de content is ingeladen ga ik hier zelf niets meer aan veranderen. 
+ik ga enkel de display css property van elk element veranderen door middel van jquerry 
+(dit doe ik door de elementen met de juiste class die ik in mijn ajax call heb gegeven te hiden of te showen).
+Hierdoor moet ik geen dingen gaan veranderen vanaf dat deze is ingeladen en blijft dit altijd hetzelfde.
 
-## Resources
-https://www.podiumaanhuis.be/
+2) 
+de zoekfunctie gaat elk element binnen de div met id listofvideos vergelijken met de value die we intypen in de searchbar. 
+Als deze niet overeenkomen gaat deze hidden worden door de css property display te veranderen naar hidden (dit gebeurt ook met jquerry)
 
-https://github.com/pmcp/ehbdev4werkstuk
+3)
+de filterknoppen werken door de elementen te hiden via jquerry door middel van de classes van de elementen.
+Ik heb gekozen om zo te werken omdat de content op de pagina altijd dezelfde blijft, we zien ze gewoon niet meer.
 
-https://docs.google.com/presentation/d/1tlhfJPTmw0MP4kfKSdszo4bUSKwG9xRcuSmzhbkiNaw/edit?usp=sharing
+
+
+
+
+
 
  
